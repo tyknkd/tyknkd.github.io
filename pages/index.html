@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="Tyler Kinkade">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Tyler Kinkade</title>
+
+    <!-- Adapted from Bootstrap Templates by Mark Otto, Jacob Thornton, and Bootstrap contributors -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/">
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  
+  <body class="d-flex text-bg-dark">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </symbol>
+      <symbol id="linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
+        </path>
+      </symbol>
+
+      <symbol id="researchgate" viewBox="0 0 400 400">
+        <defs><style>.cls-1{fill:#fff;}.cls-2{fill:#011716;}</style></defs>
+        <rect class="cls-1" width="400" height="400"></rect>
+        <path class="cls-2" d="M186.65,185.3c0-19.7-12.3-30.55-33.05-30.55h-20V216.7c5.75.45,9.25.75,17.8.75,21.9.45,35.25-12.7,35.25-32.15m3.4,100.15A367.77,367.77,0,0,1,153,229H133.9v41.2c0,15.3,3.5,18.5,10.2,19.45l12.8,1.75v7.15c-6.1,0-20.45-.75-31.6-.75s-23.15.45-29.8.75v-7.15l9.25-1.75c6.4-1.2,10.1-4.15,10.1-19.45v-97.6c-.3-15.65-4-18.35-10.45-19.55l-9.25-1.65v-7.2H121.1c9.9,0,22.4-.75,37.05-.75,27.8,0,49.55,12.8,49.55,40.45A45.29,45.29,0,0,1,173,226,294.62,294.62,0,0,0,210,278.3a36.22,36.22,0,0,0,24.15,13.05v6.4a31.62,31.62,0,0,1-11.4,1.95,42.11,42.11,0,0,1-32.7-14.25">
+        </path>
+        <path class="cls-2" d="M283.3,111.45c-4.35-10.55-13.85-18.2-28.1-18.2a29.47,29.47,0,0,0-21.9,9c-8.2,8.3-8.1,17.7-8.1,34s-.1,25.65,8.1,33.95a30.15,30.15,0,0,0,21.9,9.05c8.8,0,16.65-2.85,23-9.6,5.5-6,7.5-13,7.5-23.9V132.8H256.8v10.95H273v4.75c0,5.45-1.15,9.75-4.2,13.3a17.64,17.64,0,0,1-13.6,5.95,16.56,16.56,0,0,1-12.3-5.1c-4.1-4.5-5.05-9.4-5.05-26.35s1-21.75,5.05-26.25a16.76,16.76,0,0,1,12.3-5.25c8.15,0,13.85,4.15,16.6,11.35Z">
+        </path>
+      </symbol>
+    </svg>
+
+    <div class="cover-container d-flex p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">J. Tyler Kinkade</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto flex-nowrap">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#presentations">Presentations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#awards">Awards</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3">
+        <div id="about" class="container col-xxl-10 px-4 py-5">
+          <h1 class="display-6">About</h1>
+          <div class="row flex-lg-row align-items-center g-5 py-4">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-5">
+              <img src="../assets/images/portrait.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy">
+            </div>
+            <div class="col-lg-9 col-md-6 col-12">
+              <p class="lead">
+                I am a university instructor, applied linguistics researcher, and software developer.
+                I completed my Master of Science in Education at Temple University in 2016, 
+                and I am currently studying computer science with an emphasis on machine learning 
+                at the University of Colorado Boulder.
+              </p>
+              <p class="lead">
+                I am seeking part-time remote work or internship opportunities in the tech industry and am
+                especially interested in working on projects related to NLP or language education. 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="publications" class="container col-xxl-10 px-4 py-5">
+          <h1 class="display-6">Publications</h1>
+          <div class="row flex-lg-row align-items-center py-4">
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2022). Increasing fluency and coherence in extensive speaking. 
+                <i>Temple University Japan Studies in Applied Linguistics, 134, </i>2–10
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2022). Five key principles of second language instruction. 
+                <i>Temple University Japan Studies in Applied Linguistics, 134,</i> 100–103
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T., & Endo, S. (2021). LGBT who? Crosslinguistic influence in sociosexual and gender literacy. 
+                <i>Gender Awareness in Language Education Journal, 13,</i> 6–28
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2020). Building vocabulary and agency with an online app. 
+                In P. Clements, A. Krause, & R. Gentry (Eds.), <i>Teacher efficacy, learner agency,</i> 508–515. 
+                doi:10.37546/JALTPCP2019-58
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2020). Guidelines for language classroom assessment. 
+                <i>Temple University Japan Studies in Applied Linguistics, 131,</i> 85–87
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2019). Guidelines for teaching pronunciation. 
+                <i>Temple University Japan Studies in Applied Linguistics, 123,</i> 87–89
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2016). Japanese university students’ English proficiency, receptive lexical knowledge, and written lexical use. 
+                In D. Beglar (Ed.), <i>Proceedings of the 18th Annual Temple University Japan Campus Applied Linguistics Colloquium,</i> Tokyo, 25–33
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2016). Commerce high school students’ interests in and attitudes towards English. 
+                In P. Clements, A. Krause, & H. Brown (Eds.), <i>Focus on the learner,</i> 120–126. ISBN:978-4901352529
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2015). A proposal to investigate Japanese technical high school student English motivation. 
+                In D. Beglar (Ed.), <i>Proceedings of the 17th Annual Temple University Japan Campus Applied Linguistics Colloquium,</i> Osaka, 78–88
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2015). An English communication I course for first-year technical high school students. 
+                <i>Temple University Japan Studies in Applied Linguistics,</i> 99, 1–15
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2008). <i>Spanish for the workplace, levels 1–2.</i> Education and Life Training Center
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="presentations" class="container col-xxl-10 px-4 py-5">
+          <h1 class="display-6">Presentations</h1>
+          <div class="row flex-lg-row align-items-center py-4">
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2019, November 3). 
+                <i>Building vocabulary and agency with an online app</i> [Juried poster presentation]. 
+                JALT2019 45th Annual International Conference on Language Teaching and Learning, Nagoya
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2019, June 19). 
+                <i>English learning and learner beliefs</i> [Invited paper presentation]. 
+                2019 Kanagawa University Humanities Society New Member Welcome Lecture, Yokohama
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2016, February 7). 
+                <i>
+                  Japanese university students’ English proficiency, receptive lexical knowledge, 
+                  and written lexical use
+                </i> 
+                [Juried poster presentation]. 
+                18th Temple University Applied Linguistics Colloquium, Tokyo
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2015, November 21). 
+                <i>Understanding commerce high school learners’ needs</i> [Juried poster presentation]. 
+                JALT2015 41st Annual International Conference on Language Teaching and Learning, Shizuoka
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2015, February 7). 
+                <i>Motivating Japanese technical high school students in required English courses</i> [Juried paper presentation]. 
+                17th Temple University Applied Linguistics Colloquium, Osaka
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T. (2014, December 14). 
+                <i>Enhancing technical high school English students’ motivation</i> [Juried poster presentation]. 
+                JALT Learner Development Creating Community, Learning Together Conference, Tokyo
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kawakami, K., Nakazono, Y., Kinkade, J. T., Shindome, K., & Little, R. (2013, November 14). 
+                <i>Effective team teaching workshop</i> [Invited workshop panel]. 
+                Kagoshima Prefecture ALT Skill Development Conference
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T., & Wipf, G. D. (2012, November 22). 
+                <i>Communicative approach to entrance exam preparation workshop.</i> 
+                Kagoshima Prefecture ALT Skill Development Conference
+              </p>
+            </div>
+            <div class="col-12">
+              <p class="lead">
+                Kinkade, J. T., & Martens, J. (2011, November 25). 
+                <i>Classroom Aikido: Classroom management workshop.</i> 
+                Kagoshima Prefecture ALT Skill Development Conference
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="projects" class="container col-xxl-10 px-4 py-5">
+          <h1 class="display-6">Projects</h1>
+          <div class="row flex-lg-row align-items-center py-4">
+            <div class="col-12">
+              <p class="lead">
+                <a class="text-white" href="https://github.com/tyknkd/wordsalad" target="_blank">Word Salad Flashcard Study App</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="awards" class="container col-xxl-10 px-4 py-5">
+          <h1 class="display-6">Awards</h1>
+          <div class="row flex-lg-row align-items-center py-4">
+            <div class="col-12">
+              <p class="lead">
+                <a class="text-white" href="https://jalt.org/conference/jalt2022/msboj" target="_blank">
+                  Michele Steele Best of Japan Association for Language Teaching 2021 Award
+                </a>
+                <br>
+                Awarded to Tyler Kinkade and Shunpei Endo for their 2021 paper:
+                <br> 
+                "LGBT who? Crosslinguistic influence in sociosexual and gender literacy." <i>GALE Journal, 13</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-white-50">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0">J. Tyler Kinkade, 2023</span>
+        </div>
+        <ul id= "contact" class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-white" href="https://github.com/tyknkd" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#github"></use></svg></a></li>
+          <li class="ms-3"><a class="text-white" href="https://www.linkedin.com/in/tylerkinkade" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#linkedin"></use></svg></a></li>
+          <li class="ms-3"><a class="" href="https://www.researchgate.net/profile/Tyler-Kinkade" target="_blank"><svg class="bi" width="24" height="24"><use xlink:href="#researchgate"></use></svg></a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
